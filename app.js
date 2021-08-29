@@ -75,7 +75,8 @@ const server = http.createServer((req, res) => {
 });
 
 //Laukiame užklausų
-server.listen(4000, "localhost");
+server.listen(process.env.PORT);
+console.log("klausoma: " + process.env.PORT);
 
 /*
 forecast('klaipeda', (temp)=>{
